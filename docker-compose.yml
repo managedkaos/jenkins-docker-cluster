@@ -3,6 +3,8 @@ version: '3'
 services:
    master:
      image: jenkins:latest
+     environment:
+       - JAVA_OPTS="-Djenkins.install.runSetupWizard=false"   
      ports:
        - "49099:8080"
    node1:
