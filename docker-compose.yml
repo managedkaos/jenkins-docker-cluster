@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+   master:
+     image: jenkins:latest
+     ports:
+       - "49099:8080"
+   node1:
+     build: .
+     ports: 
+       - "48098:22"
